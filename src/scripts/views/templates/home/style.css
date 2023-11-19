@@ -1,0 +1,71 @@
+body {
+  padding-top: 56px; /* Adjust this value based on your navbar height */
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar-brand img {
+  width: 217px;
+  height: 60px;
+}
+
+.hero-section {
+  padding: 80px 0;
+  background-color: #f8f9fa; /* Adjust background color as needed */
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.welcome {
+  color: #4BB1FB;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.hero-writer {
+  color: #211B3D;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.btn {
+  margin-top: 30px;
+  width: 30%;
+}
+
+@media (max-width: 767px) {
+  /* Responsive styling for small screens (phones) */
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .col-md-6 {
+    text-align: center; /* Center text for small screens */
+  }
+
+  .btn {
+    width: 50%; /* Full width for buttons on small screens */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Responsive styling for medium screens (tablets) */
+  .hero-section {
+    padding: 60px 0;
+  }
+
+  .btn {
+    width: 50%; /* 50% width for buttons on medium screens */
+  }
+}
+
