@@ -25,14 +25,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|gif|html)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'icons',
-              publicPath: 'icons',
+              outputPath: 'images',
+              publicPath: 'images',
             },
           },
         ],

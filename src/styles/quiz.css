@@ -52,3 +52,10 @@
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
 }
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    justify-content: center;
+    text-align: justify;
+}
