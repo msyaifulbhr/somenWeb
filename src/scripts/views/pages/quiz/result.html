@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Kuis</title>
+    <script>
+        var totalScore = 0;
+        totalScore = parseInt(localStorage.getItem('score'));
+        
+        if (totalScore > 15) {
+            document.write("<p>Anda stress tinggi.</p>");
+        } else if (totalScore > 10) {
+            document.write("<p>Anda stress sedang.</p>");
+        } else {
+            document.write("<p>Keadaan mental sehat.</p>");
+        }
+    </script>
+</head>
+<body>
+    <h1>Hasil Kuis</h1>
+</body>
+</html>

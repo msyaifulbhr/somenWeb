@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Tingkat Kesehatan Mental - Mulai</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../../../styles/quiz.css">
+</head>
+<body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="card p-4">
+    <h5 class="mb-4">Selamat datang! Klik tombol "Mulai" untuk memulai tes.</h5>
+    <button class="btn btn-primary" onclick="startQuiz()">Mulai</button>
+  </div>
+
+  <script>
+    function startQuiz() {
+      // Hapus cache skor sebelumnya
+      localStorage.removeItem('score');
+      // Redirect ke soal 1
+      window.location.href = 'soal1.html';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Tingkat Kesehatan Mental - Soal 4</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../../../styles/quiz.css">
+  <style>
+    .progress-bar {
+      width: 40%;
+      background-color: #2196F3;
+    }
+  </style>
+</head>
+<body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="card p-4">
+    <div class="progress mb-4">
+      <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <h5 class="mb-4">Pertanyaan 4/10</h5>
+    <h4 class="mb-4">Sejauh mana Anda merasa dapat mengatasi tekanan atau tuntutan dalam kehidupan sehari-hari?</h4>
+    <form>
+      <div class="form-group">
+        <label class="radio-container">Iya, lebih dari biasanya
+          <input type="radio" name="q4" value="4">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="radio-container">Sama saja seperti biasanya
+          <input type="radio" name="q4" value="3">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="radio-container">Kurang dari biasanya
+          <input type="radio" name="q4" value="2">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="radio-container">Sangat berkurang dari biasanya
+          <input type="radio" name="q4" value="1">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </form>
+    <button class="btn btn-primary" onclick="nextPage('soal5.html')">Next</button>
+  </div>
+
+  <script>
+  function nextPage() {
+    var questionNumber = 4; // karena ini adalah soal1.html
+    var selectedOption = document.querySelector('input[name=q' + questionNumber + ']:checked');
+    if (selectedOption) {
+      var storedScore = localStorage.getItem('score');
+      var currentScore = storedScore ? parseInt(storedScore) : 0;
+      var score = currentScore + parseInt(selectedOption.value);
+      localStorage.setItem('score', score);
+      if (questionNumber < 9) {
+        window.location.href = 'soal' + (questionNumber + 1) + '.html';
+      } else {
+        // Jika ini adalah halaman terakhir (soal 9), pindah ke halaman hasil
+        window.location.href = 'hasil.html';
+      }
+    } else {
+      alert('Pilih salah satu opsi sebelum melanjutkan.');
+    }
+  }
+</script>
+</body>
+</html>
