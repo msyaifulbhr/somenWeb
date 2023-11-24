@@ -25,7 +25,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|html)$/i,
+        test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
             loader: 'file-loader',
@@ -44,6 +44,7 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
     }),
+    ...generateHtmlPlugins(),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -54,3 +55,16 @@ module.exports = {
     }),
   ],
 };
+
+function generateHtmlPlugins() {
+  const pages = [
+    'mulai',
+    'soal1', 'soal2', 'soal3', 'soal4', 'soal5', 'soal6', 'soal7', 'soal8', 'soal9', 'soal10',
+    'rendah', 'sedang', 'tinggi'
+  ];
+
+  return pages.map(page => new HtmlWebpackPlugin({
+    filename: `${page}.html`,
+    template: path.resolve(__dirname, `src/scripts/views/pages/quiz/${page}.html`),
+  }));
+}
