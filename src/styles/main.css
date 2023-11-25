@@ -1,3 +1,7 @@
+h1#h1hero{
+  padding-top: 30%;
+}
+
 body {
   padding-top: 56px; /* Adjust this value based on your navbar height */
   font-family: 'Poppins', sans-serif;
@@ -69,3 +73,56 @@ body {
   }
 }
 
+
+.card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    border-radius: 15px;
+}
+
+img.img-fluid.mb-2 {
+    max-width: 60%;
+    height: auto;
+}
+
+div#footer.col-md-3{
+  padding-left: 5%;
+}
+
+.pl-0, .px-0 {
+    padding-left: 5%!important;
+}
+
+P, h5, li, h1{
+  color: #211B3D;
+}
+
+  .card {
+    height: 100%; 
+    cursor: pointer;
+    border-radius: 40px; 
+    transition: box-shadow 0.3s;
+  }
+
+  .card-link {
+    text-decoration: none; 
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  .footer {
+    background-color: #f8f9fa; 
+    padding: 20px 0;
+  }
+
+  .footer .col-md-3 {
+    padding: 0 15px; 
+  }
+
+  p#copyright {
+    text-align: center;
+    opacity: 40%;
+  }
