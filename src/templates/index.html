@@ -14,11 +14,34 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     function scrollToSection2() {
       $('html, body').animate({
         scrollTop: $('#section2').offset().top
       }, 'slow');
+    }
+
+    function findLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+            
+            const mapsUrl = `https://www.google.com/maps/search/psikolog+terdekat/@${latitude},${longitude}`;
+            
+            window.open(mapsUrl, '_blank');
+        }, function(error) {
+          Swal.fire({
+              title: "upss!",
+              text: "Gagal mendapatkan lokasi. Pastikan GPS Anda aktif!",
+              icon: "error"
+            });;
+            
+        });
+      } else {
+          alert('Browser Anda tidak mendukung geolokasi.');
+      }
     }
   </script>
 </head>
@@ -125,7 +148,7 @@
         <p class="hero-desc">
           Menjelajahi somber daya dan dukungan<br>yang ada di lingkungan Anda   
         </p>
-        <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="window.location.href=''">Temukan sekarang</button>
+        <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="findLocation()">Temukan sekarang</button>
       </div>
     </div>
   </div>
