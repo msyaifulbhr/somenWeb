@@ -1,4 +1,40 @@
+#bodyquiz.card {
+    border: 3px solid #211B3D;
+    border-radius: 40px;
+}
 
+button#btnmulai {
+    margin: auto;
+    width: 30%;
+}
+
+label.radio-container {
+    font-family: 'Poppins', sans-serif;
+}
+
+h5#labelmulai {
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+}
+
+img#gambarmulai {
+    width: 30%;
+    margin: auto;
+}
+
+h2#h2hasilquiz {
+    font-weight: 600;
+}
+
+img.emoticon {
+    width: 50%;
+}
+
+p#phasilquiz.card-text {
+    text-align: justify;
+    font-size: 20px;
+}
 
 .card {
     margin: auto;
@@ -15,6 +51,10 @@
     border-radius: .25rem;
 }
 
+div#cardmulai {
+    width: auto;
+    margin-top: 5%;
+}
 
 .radio-container {
   position: relative;
