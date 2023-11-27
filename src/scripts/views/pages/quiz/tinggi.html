@@ -6,10 +6,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet"
     type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Level stress tinggi</title>
     <link rel="stylesheet" type="text/css" href="../../../styles/main.css">
         <link rel="stylesheet" type="text/css" href="../../../styles/hasil.css">
         <script type="text/javascript" href="quiz.js"></script>
+    <script>
+      function findLocation(e) {
+        e.preventDefault()
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+              const latitude = position.coords.latitude;
+              const longitude = position.coords.longitude;
+              
+              const mapsUrl = `https://www.google.com/maps/search/psikolog+terdekat/@${latitude},${longitude}`;
+              
+              window.open(mapsUrl, '_blank');
+          }, function(error) {
+            Swal.fire({
+              title: "upss!",
+              text: "Gagal mendapatkan lokasi. Pastikan GPS Anda aktif!",
+              icon: "error"
+            });;
+          });
+        } else {
+            alert('Browser Anda tidak mendukung geolokasi.');
+        }
+    }
+    </script>
 </head>
 <body>
 
@@ -64,7 +88,7 @@
       <div class="col-md-12 text-center">
         <h2 class="hero-writer">Temukan Psikiater terdekat</h2>
         <p>Klik logo dibawah ini</p>
-        <a href="#" onclick="">
+        <a href="#" onclick=findLocation(event)>
            <img src="icons/lokasi.png" alt="Lokasi Logo" style="width: 60px; margin-right: 10px;">
         </a>        
       </div>
