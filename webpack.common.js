@@ -44,6 +44,22 @@ module.exports = {
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
     }),
+    new HtmlWebpackPlugin({
+      filename: 'artikel1.html',
+      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel1.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'artikel2.html',
+      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel2.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'artikel3.html',
+      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel3.html'),
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'artikel4.html',
+      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel4.html'),
+    }),
     ...generateHtmlPlugins(),
     new CopyWebpackPlugin({
       patterns: [
