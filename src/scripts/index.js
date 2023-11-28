@@ -1,6 +1,8 @@
 import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/quiz.css';
+import '../styles/artikel.css'
+
 
 document.addEventListener('DOMContentLoaded', function() {
     // Pastikan kode di dalam event ini dijalankan setelah halaman selesai dimuat
@@ -24,4 +26,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     } 
 });
+
 
