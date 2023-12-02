@@ -77,7 +77,7 @@ function generateHtmlPlugins() {
   const pages = [
     'mulai',
     'soal1', 'soal2', 'soal3', 'soal4', 'soal5', 'soal6', 'soal7', 'soal8', 'soal9', 'soal10',
-    'rendah', 'sedang', 'tinggi',
+    'rendah', 'sedang', 'tinggi','back',
   ];
 
   return pages.map((page) => new HtmlWebpackPlugin({

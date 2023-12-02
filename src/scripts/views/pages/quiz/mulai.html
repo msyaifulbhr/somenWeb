@@ -42,13 +42,16 @@
   </div>
 
 
-  <script>
-    function startQuiz() {
-      // Hapus cache skor sebelumnya
-      localStorage.removeItem('score');
-      // Redirect ke soal 1
-      window.location.href = 'soal1.html';
+<script>
+  function startQuiz() {
+    // Hapus cache skor sebelumnya
+    for (let i = 1; i <= 10; i++) {
+      localStorage.removeItem('soal' + i);
     }
-  </script>
+    // Redirect ke soal 1
+    window.location.href = 'soal1.html';
+  }
+</script>
+
 </body>
 </html>

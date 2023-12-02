@@ -10,6 +10,11 @@
     <title>Level stress tinggi</title>
         <script type="text/javascript" href="quiz.js"></script>
     <script>
+      var score10 = localStorage.getItem('soal10');
+      if (!score10) {
+        // Jika skor untuk pertanyaan sebelumnya tidak ada, redirect ke back.html
+        window.location.href = 'back.html';
+      }
       function findLocation(e) {
         e.preventDefault()
         if (navigator.geolocation) {

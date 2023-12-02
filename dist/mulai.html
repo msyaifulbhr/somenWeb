@@ -1,6 +1,57 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tes Tingkat Kesehatan Mental - Mulai</title><link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="../../../styles/quiz.css"><script defer="defer" src="app.bundle.js"></script></head><body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;"><div class="card p-4"><h5 class="mb-4">Selamat datang! Klik tombol "Mulai" untuk memulai tes.</h5><button class="btn btn-primary" id="btnmulai" onclick="startQuiz()">Mulai</button></div><script>function startQuiz() {
-      // Hapus cache skor sebelumnya
-      localStorage.removeItem('score');
-      // Redirect ke soal 1
-      window.location.href = 'soal1.html';
-    }</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Tingkat Kesehatan Mental - Mulai</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+<script defer src="app.bundle.js"></script></head>
+<body>
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="index.html">
+      <img src="icons/logo.png" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mulai.html">Tes Psikologi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Konsultasi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tentang Kami</a>
+        </li>
+      </ul>
+    </div>
+</nav>
+  <div class="card p-4" id="cardmulai">
+    <img id="gambarmulai" src="images/mulai.jpg">
+    <h5 class="mb-4" id="labelmulai">Selamat datang! Klik tombol "Mulai" untuk memulai tes.</h5>
+    <button class="btn btn-primary" id="btnmulai" onclick="startQuiz()">Mulai</button>
+  </div>
+
+
+<script>
+  function startQuiz() {
+    // Hapus cache skor sebelumnya
+    for (let i = 1; i <= 10; i++) {
+      localStorage.removeItem('soal' + i);
+    }
+    // Redirect ke soal 1
+    window.location.href = 'soal1.html';
+  }
+</script>
+
+</body>
+</html>

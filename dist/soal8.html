@@ -1,21 +1,115 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tes Tingkat Kesehatan Mental - Soal 8</title><link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link rel="stylesheet" href="../../../../styles/quiz.css"><style>.progress-bar {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tes Tingkat Kesehatan Mental - Soal 8</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .progress-bar {
       width: 80%;
       background-color: #2196F3;
-    }</style><script defer="defer" src="app.bundle.js"></script></head><body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;"><div class="card p-4"><div class="progress mb-4"><div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div></div><h5 class="mb-4">Pertanyaan 8/10</h5><h4 class="mb-4">Bagaimana perasaan Anda terkait perubahan pola makan akibat stres?</h4><form><div class="form-group"><label class="radio-container">Iya, lebih dari biasanya <input type="radio" name="q8" value="4"> <span class="checkmark"></span></label></div><div class="form-group"><label class="radio-container">Sama saja seperti biasanya <input type="radio" name="q8" value="3"> <span class="checkmark"></span></label></div><div class="form-group"><label class="radio-container">Kurang dari biasanya <input type="radio" name="q8" value="2"> <span class="checkmark"></span></label></div><div class="form-group"><label class="radio-container">Sangat berkurang dari biasanya <input type="radio" name="q8" value="1"> <span class="checkmark"></span></label></div></form><button class="btn btn-primary" onclick="nextPage('soal9.html')">Next</button></div><script>function nextPage() {
-    var questionNumber = 8; // karena ini adalah soal1.html
-    var selectedOption = document.querySelector('input[name=q' + questionNumber + ']:checked');
-    if (selectedOption) {
-      var storedScore = localStorage.getItem('score');
-      var currentScore = storedScore ? parseInt(storedScore) : 0;
-      var score = currentScore + parseInt(selectedOption.value);
-      localStorage.setItem('score', score);
-      if (questionNumber < 9) {
-        window.location.href = 'soal' + (questionNumber + 1) + '.html';
-      } else {
-        // Jika ini adalah halaman terakhir (soal 9), pindah ke halaman hasil
-        window.location.href = 'hasil.html';
-      }
-    } else {
-      alert('Pilih salah satu opsi sebelum melanjutkan.');
     }
-  }</script></body></html>
+  </style>
+<script defer src="app.bundle.js"></script></head>
+<body class="d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+  <div class="card p-4">
+    <div class="progress mb-4">
+      <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <h5 id="quizNumber" class="mb-4"></h5>
+    <h4 id="quizQuestion" class="mb-4"></h4>
+    <form id="quizForm">
+      <div class="form-group">
+        <label class="radio-container">Iya, lebih dari biasanya
+          <input type="radio" name="q8" value="4" id="q8_option4">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="radio-container">Sama saja seperti biasanya
+          <input type="radio" name="q8" value="3" id="q8_option3">
+          <span class="checkmark"></span>
+      </label>
+      </div>
+      <div class="form-group">
+        <label class="radio-container">Kurang dari biasanya
+          <input type="radio" name="q8" value="2" id="q8_option2">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="radio-container">Sangat berkurang dari biasanya
+          <input type="radio" name="q8" value="1" id="q8_option1">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+    </form>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-warning" onclick="previousPage()">Previous</button>
+      <button class="btn btn-primary" onclick="nextPage()">Next</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+      var score7 = localStorage.getItem('soal7');
+      if (!score7) {
+        // Jika skor untuk pertanyaan sebelumnya tidak ada, redirect ke back.html
+        window.location.href = 'back.html';
+      }
+      // Set checkbox state based on local storage
+      var selectedOption = localStorage.getItem('soal8');
+      if (selectedOption) {
+        document.getElementById('q8_option' + selectedOption).checked = true;
+      }
+    });
+
+       document.addEventListener("DOMContentLoaded", function () {
+        // Fungsi untuk mengambil data pertanyaan dari file JSON
+        function fetchQuestionData(questionNumber) {
+          return fetch('public/data/quis.json')
+            .then(response => response.json())
+            .then(data => {
+              // Set pertanyaan pada elemen HTML
+              document.getElementById('quizNumber').textContent = 'Pertanyaan ' + questionNumber + '/10';
+              document.getElementById('quizQuestion').textContent = data[questionNumber - 1].soalquiz;
+            })
+            .catch(error => console.error('Error fetching quiz data:', error));
+        }
+
+
+        fetchQuestionData(8);
+      }); 
+
+    function previousPage() {
+      var questionNumber = 8;
+      if (questionNumber > 1) {
+        window.location.href = 'soal' + (questionNumber - 1) + '.html';
+      } else {
+        alert('Anda berada pada halaman pertama.');
+      }
+    }
+
+    function nextPage() {
+      var questionNumber = 8;
+      var selectedOption = document.querySelector('input[name=q' + questionNumber + ']:checked');
+      if (selectedOption) {
+        var score8 = parseInt(selectedOption.value);
+        localStorage.setItem('soal8', score8);
+
+        if (questionNumber < 10) {
+          window.location.href = 'soal' + (questionNumber + 1) + '.html';
+        } else {
+          // Jika ini adalah halaman terakhir (soal 10), pindah ke halaman hasil
+          window.location.href = 'hasil.html';
+        }
+      } else {
+        alert('Pilih salah satu opsi sebelum melanjutkan.');
+      }
+    }
+  </script>
+</body>
+</html>
+

@@ -157,6 +157,11 @@
 
 
 <script>
+      var score10 = localStorage.getItem('soal10');
+      if (!score10) {
+        // Jika skor untuk pertanyaan sebelumnya tidak ada, redirect ke back.html
+        window.location.href = 'back.html';
+      }
     function bagikanDiFacebook() {
         var urlToShare = 'somen.com';
         window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(urlToShare), 'sharer', 'width=600,height=400');
