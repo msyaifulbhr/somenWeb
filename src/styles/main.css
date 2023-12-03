@@ -69,7 +69,7 @@ body {
   }
 
   .btn {
-    width: 80%; /* 50% width for buttons on medium screens */
+    width: 20%; /* 50% width for buttons on medium screens */
   }
 }
 
@@ -126,3 +126,9 @@ P, h5, li, h1{
     text-align: center;
     opacity: 40%;
   }
+
+  .col-md-3.px-0 {
+    margin-left: 2%;
+}
+
+  background-image: url(../public/images/vector.png);

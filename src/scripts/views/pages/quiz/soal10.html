@@ -17,55 +17,106 @@
     <div class="progress mb-4">
       <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
-    <h5 class="mb-4">Pertanyaan 10/10</h5>
-    <h4 class="mb-4">Sejauh mana Anda merasa mampu bersantai dan melepaskan diri dari stres dalam waktu luang Anda?</h4>
-    <form>
+    <h5 id="quizNumber" class="mb-4"></h5>
+    <h4 id="quizQuestion" class="mb-4"></h4>
+    <form id="quizForm">
       <div class="form-group">
         <label class="radio-container">Iya, lebih dari biasanya
-          <input type="radio" name="q10" value="4">
+          <input type="radio" name="q10" value="4" id="q10_option4">
           <span class="checkmark"></span>
         </label>
       </div>
       <div class="form-group">
         <label class="radio-container">Sama saja seperti biasanya
-          <input type="radio" name="q10" value="3">
+          <input type="radio" name="q10" value="3" id="q10_option3">
           <span class="checkmark"></span>
-        </label>
+      </label>
       </div>
       <div class="form-group">
         <label class="radio-container">Kurang dari biasanya
-          <input type="radio" name="q10" value="2">
+          <input type="radio" name="q10" value="2" id="q10_option2">
           <span class="checkmark"></span>
         </label>
       </div>
       <div class="form-group">
         <label class="radio-container">Sangat berkurang dari biasanya
-          <input type="radio" name="q10" value="1">
+          <input type="radio" name="q10" value="1" id="q10_option1">
           <span class="checkmark"></span>
         </label>
       </div>
     </form>
-    <button class="btn btn-primary" onclick="showResult()">Lihat Hasil</button>
+        <div class="d-flex justify-content-between">
+      <button class="btn btn-warning" onclick="previousPage()">Previous</button>
+      <button class="btn btn-primary" onclick="showResult()">Lihat Hasil</button>
+    </div>
   </div>
- 
- <script>
-  function showResult() {
-    var selectedOption = document.querySelector('input[name=q10]:checked');
-    if (selectedOption) {
-      var score = parseInt(localStorage.getItem('score')) + parseInt(selectedOption.value);
-      localStorage.setItem('score', score);
+
+   
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Set checkbox state based on local storage
+      var selectedOption = localStorage.getItem('soal10');
+      if (selectedOption) {
+        document.getElementById('q10_option' + selectedOption).checked = true;
+      }
+    });
+
+       document.addEventListener("DOMContentLoaded", function () {
+        // Fungsi untuk mengambil data pertanyaan dari file JSON
+        function fetchQuestionData(questionNumber) {
+          return fetch('public/data/quis.json')
+            .then(response => response.json())
+            .then(data => {
+              // Set pertanyaan pada elemen HTML
+              document.getElementById('quizNumber').textContent = 'Pertanyaan ' + questionNumber + '/10';
+              document.getElementById('quizQuestion').textContent = data[questionNumber - 1].soalquiz;
+            })
+            .catch(error => console.error('Error fetching quiz data:', error));
+        }
+
+
+        fetchQuestionData(10);
+      }); 
+
+      function previousPage() {
+      var questionNumber = 10;
+      if (questionNumber > 1) {
+        window.location.href = 'soal' + (questionNumber - 1) + '.html';
+      } else {
+        alert('Anda berada pada halaman pertama.');
+      }
+    }
+
+
+    function showResult() {
+      var score1 = parseInt(localStorage.getItem('soal1')) || 0;
+      var score2 = parseInt(localStorage.getItem('soal2')) || 0;
+      var score3 = parseInt(localStorage.getItem('soal3')) || 0;
+      var score4 = parseInt(localStorage.getItem('soal4')) || 0;
+      var score5 = parseInt(localStorage.getItem('soal5')) || 0;
+      var score6 = parseInt(localStorage.getItem('soal6')) || 0;
+      var score7 = parseInt(localStorage.getItem('soal7')) || 0;
+      var score8 = parseInt(localStorage.getItem('soal8')) || 0;
+      var score9 = parseInt(localStorage.getItem('soal9')) || 0;
+      var score10 = parseInt(document.querySelector('input[name=q10]:checked').value) || 0;
+
+      // Menghitung total skor dari soal1 hingga soal10
+      var totalScore = score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10;
 
       // Kriteria pengalihan halaman berdasarkan skor
-      if (score < 20) {
+      if (totalScore < 20) {
         window.location.href = 'rendah.html';
-      } else if (score >= 20 && score < 30) {
+      } else if (totalScore >= 20 && totalScore < 30) {
         window.location.href = 'sedang.html';
-      } else if (score >= 30) {
+      } else if (totalScore >= 30) {
         window.location.href = 'tinggi.html';
       }
-    } else {
-      alert('Pilih salah satu opsi sebelum menyelesaikan kuis.');
+
+      // Simpan jawaban pada local storage
+      localStorage.setItem('soal10', document.querySelector('input[name=q10]:checked').value);
     }
-  }
-</script></body>
+  </script>
+</body>
 </html>
