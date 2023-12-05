@@ -1,0 +1,148 @@
+#bodyquiz.card {
+    border: 3px solid #211B3D;
+    border-radius: 40px;
+}
+
+p#pmulai {
+    text-align: center;
+}
+
+button#btnmulai {
+    margin: auto;
+    width: 30%;
+}
+
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 30px; 
+  margin-bottom: 10px; 
+  cursor: pointer;
+  font-size: 16px; /* Ukuran teks */
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px; 
+  width: 22px; 
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 50%; 
+}
+
+.radio-container:hover input ~ .checkmark {
+  background-color: #f5f5f5; 
+}
+
+.radio-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+  border-color: #2196f3; 
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-container .checkmark:after {
+  left: 8px; 
+  top: 4px; 
+  width: 5px; 
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0; 
+  transform: rotate(45deg); 
+}
+
+
+h5#labelmulai {
+    margin: auto;
+    font-weight: bold;
+    text-align: center;
+}
+
+img#gambarmulai {
+    width: 30%;
+    margin: auto;
+}
+
+h2#h2hasilquiz {
+    font-weight: 600;
+}
+
+img.emoticon {
+    width: 50%;
+}
+
+p#phasilquiz.card-text {
+    text-align: justify;
+    font-size: 20px;
+}
+
+.card {
+    margin: auto;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 70%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+div#cardmulai {
+    width: auto;
+    height: 100%;
+    margin-top: 5%;
+}
+
+@media screen and (max-width:1000px){
+    
+          .card {
+    margin: auto;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 90%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+p#phasilquiz.card-text {
+    text-align: justify;
+    font-size: 15px;
+}
+
+h2#h2hasilquiz {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+h4#quizQuestion {
+    font-size: 20px;
+}
+
+}

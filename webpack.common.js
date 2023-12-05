@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
@@ -15,6 +14,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
         test: /\.css$/,
         use: [
           {
@@ -25,43 +34,14 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'images',
-              publicPath: 'images',
-            },
-          },
-        ],
-      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
+      scriptLoading: 'defer', // Add this line to use 'defer' attribute
     }),
-    new HtmlWebpackPlugin({
-      filename: 'artikel1.html',
-      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel1.html'),
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'artikel2.html',
-      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel2.html'),
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'artikel3.html',
-      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel3.html'),
-    }),
-    new HtmlWebpackPlugin({
-      filename: 'artikel4.html',
-      template: path.resolve(__dirname, 'src/scripts/views/pages/artikel/artikel4.html'),
-    }),
-    ...generateHtmlPlugins(),
     new CopyWebpackPlugin({
       patterns: [
         {
@@ -72,16 +52,3 @@ module.exports = {
     }),
   ],
 };
-
-function generateHtmlPlugins() {
-  const pages = [
-    'mulai',
-    'soal1', 'soal2', 'soal3', 'soal4', 'soal5', 'soal6', 'soal7', 'soal8', 'soal9', 'soal10',
-    'rendah', 'sedang', 'tinggi','back',
-  ];
-
-  return pages.map((page) => new HtmlWebpackPlugin({
-    filename: `${page}.html`,
-    template: path.resolve(__dirname, `src/scripts/views/pages/quiz/${page}.html`),
-  }));
-}
