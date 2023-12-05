@@ -1,0 +1,47 @@
+/* ! Responsive */
+@media screen and (min-width: 768px) {
+  #navbar img {
+    width: 9em;
+    margin: 0 1.4em;
+  }
+
+  #btnmain {
+    width: 35%;
+  }
+
+  #btn4 {
+    width: 60%;
+  }
+
+  #hero-img {
+    margin-top: 2em;
+  }
+
+  #section2 #hero-content,
+  #section3 #hero-content,
+  #section4 #hero-content {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-size: 100%;
+  }
+
+  #coloumn2,
+  #coloumn3 {
+    margin-left: 0;
+  }
+
+  #hero-content {
+    text-align: start;
+  }
+
+  #hero-img {
+    max-width: auto;
+    height: auto;
+  }
+
+
+}
