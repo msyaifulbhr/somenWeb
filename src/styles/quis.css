@@ -12,9 +12,62 @@ button#btnmulai {
     width: 30%;
 }
 
-label.radio-container {
-    font-family: 'Poppins', sans-serif;
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 30px; 
+  margin-bottom: 10px; 
+  cursor: pointer;
+  font-size: 16px; /* Ukuran teks */
+  user-select: none;
 }
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px; 
+  width: 22px; 
+  background-color: #fff; 
+  border: 1px solid #ddd; 
+  border-radius: 50%; 
+}
+
+.radio-container:hover input ~ .checkmark {
+  background-color: #f5f5f5; 
+}
+
+.radio-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+  border-color: #2196f3; 
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-container .checkmark:after {
+  left: 8px; 
+  top: 4px; 
+  width: 5px; 
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0; 
+  transform: rotate(45deg); 
+}
+
 
 h5#labelmulai {
     margin: auto;
@@ -61,53 +114,35 @@ div#cardmulai {
     margin-top: 5%;
 }
 
-.radio-container {
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 400;
-  font-family: "Manrope";
+@media screen and (max-width:1000px){
+    
+          .card {
+    margin: auto;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 90%;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
 }
 
-.radio-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+p#phasilquiz.card-text {
+    text-align: justify;
+    font-size: 15px;
 }
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border: 1px solid #ccc;
+h2#h2hasilquiz {
+    font-weight: 400;
+    font-size: 20px;
 }
 
-.radio-container input:checked + .checkmark {
-  background-color: #2196F3;
+h4#quizQuestion {
+    font-size: 20px;
 }
 
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
 }
-
-.radio-container input:checked + .checkmark:after {
-  display: block;
-}
-
-.radio-container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
-}
-

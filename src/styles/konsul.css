@@ -1,0 +1,43 @@
+   .cardkonsul {
+      width: 100%; /* Menyesuaikan lebar card dengan lebar container */
+      max-width: 300px; /* Lebar maksimum card */
+      margin: 0 auto;
+      margin-bottom: 20px;
+      border: 2px solid #e0e0e0;
+      border-radius: 15px; /* Sesuaikan nilai border radius sesuai keinginan */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sesuaikan nilai shadow sesuai keinginan */
+      transition: transform 0.3s; /* Efek transisi ketika hover (opsional) */
+   }
+
+
+    .cardkonsul:hover {
+      transform: scale(1.05); /* Efek zoom in ketika hover (opsional) */
+    }
+
+#titlekonsul {
+    margin: auto;
+    color: #211B3D;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2.25em;
+    text-align: center;
+    font-weight: 700;
+    border: 5px solid #00baff;
+    width: 50%;
+    border-radius: 30px;
+    margin-bottom: 4%;
+}
+
+@media screen and (max-width:1000px){
+#titlekonsul {
+    margin: auto;
+    color: #211B3D;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2em;
+    text-align: center;
+    font-weight: 700;
+    border: 5px solid #00baff;
+    width: 90%;
+    border-radius: 30px;
+    margin-bottom: 4%;
+}
+   }

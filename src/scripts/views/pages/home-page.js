@@ -75,7 +75,7 @@ const Home = {
               Luangkan waktu sejenak untuk mengevaluasi keadaan<br />
               pikiran anda.
             </p>
-            <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="window.location.href='#/mulai'">Ikuti Tes</button>
+            <button type="button" class="btn btn-primary rounded-pill" id="btnkuis" onclick="window.location.href='#/mulai'">Ikuti Tes</button>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@ const Home = {
               Ambillah langkah bijak dengan konsultasi personal<br />
               untuk solusi terbaik dan keseimbangan hidup.
             </p>
-            <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="window.location.href=''">Konsul sekarang</button>
+            <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="window.location.href='#/consul'">Konsul sekarang</button>
           </div>
         </div>
       </div>

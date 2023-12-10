@@ -119,7 +119,10 @@ footer {
   margin-bottom: 0.6em;
 }
 
-#btn4 {
+#btn4, #btnkuis {
   width: 50%;
 }
 
+a#lokasi {
+    color: #007bff;
+}
