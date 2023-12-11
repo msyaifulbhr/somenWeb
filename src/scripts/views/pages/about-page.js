@@ -18,13 +18,50 @@ const About = {
 
 <div class="container mt-70">
         <div class="row">
+            <div class="col-lg-12">
+                <h3 class="medium-header">
+                    Cerita dibalik Somen
+                </h3>
+                <p class="primary-copy">
+                    Alasan Somen hadir mulai dari obrolan kecil sampai terbentuknya #sobatmental
+                </p>
+            </div>
+        </div>
+        <div class="row mt-30">
+            <div class="col-lg-6">
+                <p>
+                    Tingkat kesadaran masyarakat terhadap kesehatan mental semakin meningkat, namun masih terdapat hambatan dalam akses informasi dan bantuan yang diperlukan. Banyak individu yang mengalami kesulitan dalam memeriksa kesehatan mental mereka sendiri, sebagian karena stigma dan sebagian karena keterbatasan dalam menghubungi ahli kesehatan mental. Ini menciptakan situasi di mana banyak yang mungkin tidak memahami betapa pentingnya menjaga kesehatan mental mereka dan mencari bantuan jika diperlukan. Oleh karena itu, tim kami telah memilih untuk membangun aplikasi web kesehatan mental yang komprehensif, yang akan memberikan informasi lengkap tentang kesehatan mental, dan self-assessment tools untuk evaluasi diri. Dengan proyek ini, kami berharap dapat mengatasi kesulitan akses dan meningkatkan kesadaran masyarakat tentang pentingnya kesehatan mental serta memberikan bantuan yang diperlukan bagi individu yang membutuhkannya.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <img src="images/service1.png" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-70">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="medium-header mb-10">
+                    Tim Kami
+                </h3>
+                <p class="primary-copy mb-30">
+                    Dengan pengalaman yang cukup, kami berkomitmen untuk memberikan yang terbaik kepada pengguna Somen.
+                </p>
+            </div>
+            <div class="col-lg-6 text-end">
+                <a href="#" class="btn btn-secondary">Lihat Semua</a>
+            </div>
+        </div>
+        <div class="row mt-70">
             <div class="col-lg-6">
                 <div class="col-lg-12 mb-20">
-                    <div class="col-lg-2 team-item">
-                        <div class="card">
-                            <img src="images/default.jpg" class="avatar" alt="Eldy">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <img src="images/default.jpg" class="avatar" alt="Eldy">
+                            </div>
                         </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-7">
                             <div class="card-body">
                                 <h5 class="card-title">Eldy Efendy</h5>
                                 <p class="card-text">Front-End Developer</p>
@@ -34,14 +71,16 @@ const About = {
                     </div>
                 </div>
                 <div class="col-lg-12 mb-20">
-                    <div class="col-lg-2 team-item">
-                        <div class="card">
-                            <img src="images/default.jpg" class="avatar" alt="Ivan">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <img src="images/default.jpg" class="avatar" alt="Ivan">
+                            </div>
                         </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-7">
                             <div class="card-body">
                                 <h5 class="card-title">Ivan Prastio</h5>
-                                <p class="card-text">Back-End Developer</p>
+                                <p class="card-text">Front-End Developer</p>
                                 <a href="#" class="btn btn-primary">Lihat Profil</a>
                             </div>
                         </div>
@@ -50,25 +89,29 @@ const About = {
             </div>
             <div class="col-lg-6">
                 <div class="col-lg-12 mb-20">
-                    <div class="col-lg-2 team-item">
-                        <div class="card">
-                            <img src="images/default.jpg" class="avatar" alt="Fikri">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <img src="images/default.jpg" class="avatar" alt="Fikri">
+                            </div>
                         </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-7">
                             <div class="card-body">
                                 <h5 class="card-title">Fikri Haikal Dwi Putra Chaniago</h5>
-                                <p class="card-text">Front-End Developer</p>
+                                <p class="card-text">Back-End Developer</p>
                                 <a href="#" class="btn btn-primary">Lihat Profil</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-12 mb-20">
-                    <div class="col-lg-2 team-item">
-                        <div class="card">
-                            <img src="images/default.jpg" class="avatar" alt="Syaiful">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <img src="images/syaiful.jpg" class="avatar" alt="Syaiful">
+                            </div>
                         </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-7">
                             <div class="card-body">
                                 <h5 class="card-title">Muhamad Syaiful Bahri</h5>
                                 <p class="card-text">Front-End Developer</p>
@@ -78,11 +121,13 @@ const About = {
                     </div>
                 </div>
                 <div class="col-lg-12 mb-20">
-                    <div class="col-lg-2 team-item">
-                        <div class="card">
-                            <img src="images/default.jpg" class="avatar" alt="Ahmad">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="card">
+                                <img src="images/default.jpg" class="avatar" alt="Ahmad">
+                            </div>
                         </div>
-                        <div class="col-lg-10">
+                        <div class="col-lg-7">
                             <div class="card-body">
                                 <h5 class="card-title">Ahmad Fauzi Ariyanto</h5>
                                 <p class="card-text">Front-End Developer</p>
