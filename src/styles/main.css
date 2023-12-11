@@ -126,3 +126,37 @@ footer {
 a#lokasi {
     color: #007bff;
 }
+
+.team-item {
+  display: flex;
+}
+
+.card {
+  flex: 0 0 auto;
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+}
+
+.card img {
+  height: 150px;
+  width: 150px;
+  border-radius: 10%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1rem;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
