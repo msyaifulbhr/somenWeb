@@ -3,6 +3,7 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import '../styles/quis.css';
 import '../styles/konsul.css';
+import '../styles/about.css';
 import './component/nav-bar';
 import './component/foot-bar';
 import App from './views/app';
