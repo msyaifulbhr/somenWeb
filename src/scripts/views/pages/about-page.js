@@ -121,7 +121,7 @@ const About = {
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="card">
-                                <img src="images/ahmad.jpeg" class="avatar" alt="Ahmad" style="height : 140px;">
+                                <img src="images/ahmad.jpeg" class="avatar" alt="Ahmad">
                             </div>
                         </div>
                         <div class="col-lg-7">
