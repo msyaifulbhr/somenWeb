@@ -126,3 +126,20 @@ footer {
 a#lokasi {
     color: #007bff;
 }
+
+.card {
+  flex: 0 0 auto;
+  min-width: 250px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-70 {
+  margin-top: 70px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
