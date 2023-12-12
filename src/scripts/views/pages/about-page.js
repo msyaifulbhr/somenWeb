@@ -71,7 +71,7 @@ const About = {
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="card">
-                                <img src="images/default.jpg" class="avatar" alt="Ivan">
+                                <img src="images/ivan.jpeg" class="avatar" alt="Ivan">
                             </div>
                         </div>
                         <div class="col-lg-7">
@@ -121,7 +121,7 @@ const About = {
                     <div class="row">
                         <div class="col-lg-5">
                             <div class="card">
-                                <img src="images/default.jpg" class="avatar" alt="Ahmad">
+                                <img src="images/ahmad.jpeg" class="avatar" alt="Ahmad" style="height : 140px;">
                             </div>
                         </div>
                         <div class="col-lg-7">
