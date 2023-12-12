@@ -128,7 +128,7 @@ const About = {
                             <div class="card-body-about">
                                 <h5 class="card-title">Ahmad Fauzi Ariyanto</h5>
                                 <p class="card-text">Front-End Developer</p>
-                                <a href="linkedin.com/in/ahmadfauziariyanto" class="btn btn-primary" target="_blank">Lihat Profil</a>
+                                <a href="https://www.linkedin.com/in/ahmadfauziariyanto" class="btn btn-primary" target="_blank">Lihat Profil</a>
                             </div>
                         </div>
                     </div>
