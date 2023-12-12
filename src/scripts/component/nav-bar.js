@@ -20,7 +20,7 @@ class NavBar extends HTMLElement {
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#/mulai">Tes Psikologi</a>
+          <a class="nav-link" href="#/mulai" id="navkuis">Tes Psikologi</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#/consul">Konsultasi</a>
