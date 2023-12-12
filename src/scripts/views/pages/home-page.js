@@ -1,42 +1,7 @@
-export const findLocation = () => {
-         if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            function (position) {
-              const latitude = position.coords.latitude;
-              const longitude = position.coords.longitude;
-
-              const mapsUrl = `https://www.google.com/maps/search/psikolog+terdekat/@${latitude},${longitude}`;
-
-              window.open(mapsUrl, '_blank');
-            },
-            function (error) {
-              Swal.fire({
-                title: 'upss!',
-                text: 'Gagal mendapatkan lokasi. Pastikan GPS Anda aktif!',
-                icon: 'error',
-              });
-            }
-          );
-        } else {
-          alert('Browser Anda tidak mendukung geolokasi.');
-        }
-      
-};
-
-export const scrollToSection2 = () => {
-        $('html, body').animate(
-          {
-            scrollTop: $('#section2').offset().top,
-          },
-          'slow'
-        );
-      }
-
 const Home = {
   async render() {
     return `
     <!-- Hero Section 1 -->
-    <div class="bg">
     <section class="hero-section d-flex align-items-center" id="section1">
       <div class="container">
         <div class="row mx-lg-auto mt-lg-5" id="hero-content">
@@ -53,12 +18,11 @@ const Home = {
             langkah untuk meningkatkan kualitas hidup kita.
             </p>
             <!-- Tombol Selengkapnya yang menggulir ke section 2 -->
-        <button type="button" class="btn btn-primary rounded-pill" id="btnmain">Selengkapnya</button>
+            <button type="button" class="btn btn-primary rounded-pill" id="btnmain" onclick="scrollToSection2()">Selengkapnya</button>
           </div>
         </div>
       </div>
     </section>
-
 
     <!-- Hero Section 2 -->
     <section class="hero-section" id="section2">
@@ -75,12 +39,12 @@ const Home = {
               Luangkan waktu sejenak untuk mengevaluasi keadaan<br />
               pikiran anda.
             </p>
-            <button type="button" class="btn btn-primary rounded-pill" id="btnkuis" onclick="window.location.href='#/mulai'">Ikuti Tes</button>
+            <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="window.location.href='mulai.html'">Ikuti Tes</button>
           </div>
         </div>
       </div>
     </section>
-    </div>
+    
     <!-- Hero Section 3 -->
     <section class="hero-section" id="section3">
       <div class="container">
@@ -94,7 +58,7 @@ const Home = {
               Ambillah langkah bijak dengan konsultasi personal<br />
               untuk solusi terbaik dan keseimbangan hidup.
             </p>
-            <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="window.location.href='#/consul'">Konsul sekarang</button>
+            <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="window.location.href=''">Konsul sekarang</button>
           </div>
         </div>
       </div>
@@ -111,7 +75,7 @@ const Home = {
           <div class="col-md-6 order-md-2 m-md-auto">
             <h1 id="hero-title">Temukan Bantuan <br />di Sekitarmu</h1>
             <p id="hero-desc">Menjelajahi somber daya dan dukungan<br />yang ada di lingkungan Anda</p>
-                    <button type="button" class="btn btn-primary rounded-pill" id="lokasi">Temukan sekarang</button>
+            <button type="button" class="btn btn-primary rounded-pill" id="btn4" onclick="findLocation()">Temukan sekarang</button>
           </div>
         </div>
       </div>
@@ -120,11 +84,8 @@ const Home = {
   },
 
   async afterRender() {
-  const gps = document.getElementById('lokasi')
-    gps.addEventListener('click', findLocation);
-
-  const gulir = document.getElementById('btnmain')
-    gulir.addEventListener('click', scrollToSection2);
+    return `
+    `;
   },
 };
 

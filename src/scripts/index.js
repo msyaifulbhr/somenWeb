@@ -1,13 +1,10 @@
 import 'regenerator-runtime';
 import '../styles/main.css';
 import '../styles/responsive.css';
-import '../styles/quis.css';
-import '../styles/konsul.css';
-import '../styles/about.css';
 import './component/nav-bar';
 import './component/foot-bar';
 import App from './views/app';
-import Mulai from './views/pages/mulai-page';
+
 // eslint-disable-next-line no-unused-vars
 const app = new App();
 
@@ -17,9 +14,16 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
-  
 });
 
-
-
-
+// eslint-disable-next-line no-unused-vars
+function scrollToSection2() {
+  // eslint-disable-next-line no-undef
+  $('html, body').animate(
+    {
+      // eslint-disable-next-line no-undef
+      scrollTop: $('#section2').offset().top,
+    },
+    'slow',
+  );
+}

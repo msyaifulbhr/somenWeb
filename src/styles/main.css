@@ -6,17 +6,12 @@ main {
   margin: 5em 0 2em;
 }
 
-img#logosomen {
-    height: 50px;
-}
-
-.bg {
+body {
   background-image: url(../public/images/vector.png);
   background-size: 150%;
   background-repeat: no-repeat;
-  background-color: #f9fbfc
+  background-color: #f9fbfc;
 }
-
 
 a {
   cursor: pointer;
@@ -119,27 +114,7 @@ footer {
   margin-bottom: 0.6em;
 }
 
-#btn4, #btnkuis {
+#btn4 {
   width: 50%;
 }
 
-a#lokasi {
-    color: #007bff;
-}
-
-.card {
-  flex: 0 0 auto;
-  min-width: 250px;
-}
-
-.mb-20 {
-  margin-bottom: 20px;
-}
-
-.mt-70 {
-  margin-top: 70px;
-}
-
-.mt-30 {
-  margin-top: 30px;
-}

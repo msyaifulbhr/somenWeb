@@ -14,16 +14,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-      },
-      {
         test: /\.css$/,
         use: [
           {
@@ -40,7 +30,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
-      scriptLoading: 'defer', // Add this line to use 'defer' attribute
     }),
     new CopyWebpackPlugin({
       patterns: [
