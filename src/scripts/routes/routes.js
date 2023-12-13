@@ -17,6 +17,7 @@ import Soal10 from '../views/pages/quiz/soal10';
 import Rendah from '../views/pages/quiz/rendah';
 import Tinggi from '../views/pages/quiz/tinggi';
 import Sedang from '../views/pages/quiz/sedang';
+import Article from '../views/pages/article-page';
 
 
 const routes = {
@@ -39,6 +40,7 @@ const routes = {
   '/rendah': Rendah,
   '/tinggi': Tinggi,
   '/sedang': Sedang,
+  '/article/:id': Article,
 };
 
 export default routes;

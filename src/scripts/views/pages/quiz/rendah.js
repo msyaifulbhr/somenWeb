@@ -1,11 +1,11 @@
 export const sharingFb = () => {
-         var urlToShare = 'somen.com';
+         var urlToShare = 'https://somen.netlify.app/';
         window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(urlToShare), 'sharer', 'width=600,height=400');
 };
 
 export const sharingWa = () => {
         var message = 'Aku baru saja tes mengukur tingkat stress di website SOMEN, yuk ikutan!';
-        var urlToShare = 'somen.com';
+        var urlToShare = 'https://somen.netlify.app/';
         window.open('https://wa.me/?text=' + encodeURIComponent(message + ' ' + urlToShare));
 };
 const Rendah = {

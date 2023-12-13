@@ -28,8 +28,8 @@ class FootBar extends HTMLElement {
           <div class="col-md-3 px-0" id="coloumn3">
             <h5>Connect Us</h5>
             <ul class="list-unstyled">
-              <li><a href="">somen12@gmail.com</a></li>
-              <li><a href="">Somen, Indonesia</a></li>
+              <li id="li-footer">somen12@gmail.com</li>
+              <li id="li-footer">Somen, Indonesia</li>
             </ul>
           </div>
         </div>

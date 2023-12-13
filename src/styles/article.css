@@ -1,0 +1,164 @@
+/* ! Article Style */
+article {
+  padding: 1.5em 2em;
+  line-height: 1.6;
+  margin: 1.5em 0;
+}
+
+.article-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.article-img {
+  width: 100%;
+  display: block;
+  border-radius: 1.7em;
+  margin-bottom: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-content {
+  text-align: justify;
+}
+
+.article-content p {
+  text-indent: 1.5em;
+}
+
+.article-content ol {
+  padding-left: 1.5em;
+}
+
+.article-content ol li {
+  margin: 1.2em 0;
+}
+
+.article-source {
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+.article-source h3 {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.article-source ul {
+  padding-left: 1em;
+  margin: 0;
+}
+
+/* ! Carousel Style */
+.article-section {
+  margin-bottom: 5em ;
+}
+
+.article-section a {
+  text-decoration: none;
+  color: #211b3d;
+  text-align: center;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  height: 4em;
+  top: 7em;
+  border-radius: 4em;
+  background-color: #4bb1fb;
+}
+
+p#cardtext-art {
+  font-size: 1.2em;
+}
+
+ article {
+    padding: 1.5em 4em;
+    font-size: 1.2em;
+  }
+
+  .article-title {
+    font-size: 1.8em;
+  }
+
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 4.5em;
+    height: 4.5em;
+    top: 9em;
+  }
+
+  .carousel-control-prev {
+    left: 5em;
+  }
+
+  .carousel-control-next {
+    right: 5em;
+  }
+
+@media screen and (max-width: 768px){
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    background-size: 100%;
+  }
+
+  #coloumn2,
+  #coloumn3 {
+    margin-left: 0;
+  }
+
+  #hero-content {
+    text-align: start;
+  }
+
+  #hero-img {
+    max-width: auto;
+    height: auto;
+  }
+
+  article {
+    padding: 1.5em 5em;
+    font-size: 1.5em;
+  }
+
+  .article-img {
+    width: 90%;
+  }
+
+  .article-title {
+    padding: 0 1em;
+  }
+
+  .article-content {
+    padding: 0 1em;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    top: 12em;
+  }
+
+  .carousel-control-prev {
+    left: 12em;
+  }
+
+  .carousel-control-next {
+    right: 12em;
+  }
+
+ p#cardtext-art {
+    font-size: 1.7em;
+  }
+}

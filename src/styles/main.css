@@ -143,3 +143,7 @@ a#lokasi {
 .mt-30 {
   margin-top: 30px;
 }
+
+li#li-footer {
+    color: #007BFF;
+}

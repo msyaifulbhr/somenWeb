@@ -116,6 +116,8 @@ const Home = {
         </div>
       </div>
     </section>
+            <!-- Article Section -->
+    <article-bar></article-bar>
     `;
   },
 
