@@ -17,7 +17,7 @@ class NavBar extends HTMLElement {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">Beranda</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#/mulai" id="navkuis">Tes Psikologi</a>

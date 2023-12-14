@@ -16,7 +16,7 @@ class FootBar extends HTMLElement {
 
           <!-- Column 2 -->
           <div class="col-md-3 px-0" id="coloumn2">
-            <h5>Features</h5>
+            <h5>Fitur</h5>
             <ul class="list-unstyled">
               <li><a href="#/mulai">Tes Psikologi</a></li>
               <li><a href="#/consul">Konsultasi gratis</a></li>
@@ -26,7 +26,7 @@ class FootBar extends HTMLElement {
 
           <!-- Column 3 -->
           <div class="col-md-3 px-0" id="coloumn3">
-            <h5>Connect Us</h5>
+            <h5>Hubungi Kami</h5>
             <ul class="list-unstyled">
               <li id="li-footer">somen12@gmail.com</li>
               <li id="li-footer">Somen, Indonesia</li>
