@@ -1,31 +1,31 @@
 [
   {
     "nomorquiz": 1,
-    "soalquiz": "Bagaimana perasaan Anda hari ini?"
+    "soalquiz": "Apakah anda merasa tertekan hari ini?"
   },
   {
     "nomorquiz": 2,
-    "soalquiz": "Bagaimana perasaan Anda terkait tekanan pekerjaan atau tugas sehari-hari?"
+    "soalquiz": "Apakah besar tekanan pekerjaan atau tugas anda belakangan ini?"
   },
   {
     "nomorquiz": 3,
-    "soalquiz": "Apakah Anda merasa kesulitan untuk tidur?"
+    "soalquiz": "Apakah tidur anda tidak nyenyak belakangan ini?"
   },
   {
     "nomorquiz": 4,
-    "soalquiz": "Bagaimana hubungan sosial Anda saat ini?"
+    "soalquiz": "Apakah anda kurang berhubungan saat ini?"
   },
   {
     "nomorquiz": 5,
-    "soalquiz": "Apakah Anda merasa energik hari ini?"
+    "soalquiz": "Apakah Anda merasa tidak energik hari ini?"
   },
   {
     "nomorquiz": 6,
-    "soalquiz": "Apakah Anda merasa sulit berkonsentrasi?"
+    "soalquiz": "belakangan ini apakah anda merasa sulit berkonsentrasi?"
   },
   {
     "nomorquiz": 7,
-    "soalquiz": "Bagaimana perasaan Anda terkait kondisi kesehatan fisik Anda?"
+    "soalquiz": "Saat ini apakah kondisi kesehatan anda tidak baik?"
   },
   {
     "nomorquiz": 8,
@@ -33,7 +33,7 @@
   },
   {
     "nomorquiz": 9,
-    "soalquiz": "Bagaimana perasaan Anda terkait masa depan?"
+    "soalquiz": "Terkait masa depan apakah anda khawatir?"
   },
   {
     "nomorquiz": 10,
