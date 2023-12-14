@@ -140,7 +140,7 @@ const About = {
   },
 
   async afterRender() {
-    // isi nya
+    window.scrollTo(0, 0);
   },
 };
 

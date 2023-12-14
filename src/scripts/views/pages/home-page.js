@@ -122,6 +122,7 @@ const Home = {
   },
 
   async afterRender() {
+  window.scrollTo(0, 0);
   const gps = document.getElementById('lokasi')
     gps.addEventListener('click', findLocation);
 

@@ -23,7 +23,7 @@ const Mulai = {
   },
 
   async afterRender() {
-    // Ambil elemen button dan tambahkan event listener
+    window.scrollTo(0, 0);
     const btnMulai = document.getElementById('btnmulai');
     btnMulai.addEventListener('click', startQuiz);
   },

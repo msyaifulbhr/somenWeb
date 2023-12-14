@@ -75,7 +75,7 @@ const Consul = {
   },
 
   async afterRender() {
-
+    window.scrollTo(0, 0);
   },
 };
 

@@ -36,6 +36,7 @@ const Rendah = {
   },
 
   async afterRender() {
+    window.scrollTo(0, 0);
 
  var score10 = localStorage.getItem('soal10');
       if (!score10) {
