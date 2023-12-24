@@ -8,7 +8,7 @@ mental health web
 | Ahmad Fauzi Ariyanto  | F156YB051  | Front-End Developer  |
 | Eldy Effendi  | F288YB128  | Front-End Developer  |
 | Fikri Haikal Dwi Putra Chaniago | F355YB210  | Front-End Developer  |
-| Ivan Prastio  | F355YB210  | Back-End Developer  |
+| Ivan Prastio  | S190YB422  | Back-End Developer  |
 | Muhamad Syaiful Bahri  | F211YB144  | Back-End Developer  |
 
 ## Overview
